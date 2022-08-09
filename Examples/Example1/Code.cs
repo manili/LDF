@@ -8,16 +8,12 @@ using Sky130;
 using static LDF.Common;
 using static Sky130.Layers;
 
-namespace Samples
+namespace Examples.Example1
 {
-    class Program
-    {
-        static void Main(string[] args)
+	public static class Code
+	{
+        public static void Run(string ExportAddress)
         {
-            DateTime startTime = DateTime.Now;
-
-            //////////////////////////////// Beginning of LDF Code ////////////////////////////////
-
             NFET_G5v0D10v5 nfet_g5v0d10v5 = new NFET_G5v0D10v5("nfet_g5v0d10v5", true, true, new MOSFETFingerConfiguration[] {
                 new MOSFETFingerConfiguration(18, 5.0f, 1.0f),
                 new MOSFETFingerConfiguration(10, 5.0f, 1.0f, Directions.Top, 2.0f)
@@ -38,12 +34,8 @@ namespace Samples
             layout.GroupTogether(powerRing);
             layout.Move(new Point(0.0f, 0.0f));
 
-            Export.ExportMagic(layout.Boxes, "/Users/mohammadaminnili/Desktop/layout.cmd");
-
-            ////////////////////////////////  Ending of LDF Code   ////////////////////////////////
-
-            DateTime endTime = DateTime.Now;
-            Console.WriteLine("Done in {0}.", endTime - startTime);
+            Export.ExportMagic(layout.Boxes, ExportAddress + "/Magic.cmd");
         }
-    }
+	}
 }
+

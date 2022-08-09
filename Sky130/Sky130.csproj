@@ -5,6 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Layout_Description_Framework\Layout_Description_Framework.csproj" />
+    <ProjectReference Include="..\LDF\LDF.csproj" />
   </ItemGroup>
 </Project>
