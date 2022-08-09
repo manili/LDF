@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>LDF</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Devices\" />
+    <None Remove="PowerStripes\" />
+    <None Remove="Tools\" />
+    <None Remove="Tools\Magic\" />
+    <None Remove="Graphics\" />
+    <None Remove="Bases\MOSFET\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bases\" />
+    <Folder Include="PowerStripes\" />
+    <Folder Include="Tools\" />
+    <Folder Include="Tools\Magic\" />
+    <Folder Include="Graphics\" />
+    <Folder Include="Bases\MOSFET\" />
+  </ItemGroup>
+</Project>
